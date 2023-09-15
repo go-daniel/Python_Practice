@@ -7,7 +7,7 @@ class DataFree(Contract):
         self._internet_fee = 200
         self.__free_data = free_data
         self.__subcription_fee = subcription_fee
-        super().__init__(customer)
+        super().__init__(customer, name='Data Free')
     
     def phone_charge(self) -> float:
         return self.call_time * self.call_fee

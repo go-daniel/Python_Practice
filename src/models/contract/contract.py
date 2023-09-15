@@ -2,11 +2,9 @@ from ..customer import Customer
 from abc import ABC, abstractmethod
 
 class Contract(ABC):
-    def __init__(self, customer: Customer) -> None:
-        self._call_time = 0
-        self._data_used = 0
-        self._call_fee = 0
-        self._internet_fee = 0
+    
+    def __init__(self, customer: Customer, name: str = 'Contract') -> None:
+        self.name = name
         self._customer = customer
         
     
@@ -57,5 +55,6 @@ class Contract(ABC):
     def data_used(self, amount: float):
         self._data_used = amount
     
-            
+    def __str__(self) -> str:
+        return self.name 
     

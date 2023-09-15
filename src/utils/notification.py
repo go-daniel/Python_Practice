@@ -3,4 +3,5 @@ def send_notification(contracts: list):
         print('-'*100)
         print('Customer:', i.customer)
         print('\n')
-        print('phone:', i.phone_charge(), '\ninternet:', i.internet_charge(), '\nTotal:', i.total_charge())
+        print('Plan:', i)
+        print('phone:', f'{i.phone_charge():,}', '\ninternet:', f'{i.internet_charge():,}', '\nTotal:', f'{i.total_charge():,}')

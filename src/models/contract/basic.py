@@ -5,7 +5,7 @@ class Basic(Contract):
     def __init__(self, customer: Customer):
         self._call_fee = 1000
         self._internet_fee = 200
-        super().__init__(customer)
+        super().__init__(customer, name='Basic')
     
     def phone_charge(self) -> float:
         return self.call_time * self.call_fee
