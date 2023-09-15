@@ -8,9 +8,9 @@ class Basic(Contract):
         super().__init__(customer)
     
     def phone_charge(self) -> float:
-        return self.get_call_time() * self.get_call_fee()
+        return self.call_time * self.call_fee
     
     def internet_charge(self) -> float:
-        return self.get_data_used() * self.get_internet_fee()
+        return self.data_used * self.internet_fee
         
         
